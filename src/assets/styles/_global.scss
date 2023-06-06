@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+$white: #ffffff;
+$white-2: #fafafb;
+$black: #000000;
+$black-2: #161318;
+$gray_light: #f8f8f8;
+$gray_light_2: #ebebeb;
+$gray: #d7d7d8;
+$gray_2: rgba(89, 100, 118, 0.16);
+$gray_3: #bdbcbe;
+$dark: #272727;
+$dark_blue: #030235;
+$dark_blue-2: #080721;
+$light_dark: #555158;
+$light_dark_2: #98a0ad;
+$light_pink: #f1dade;
+$mid_pink: #f1c7c4;
+$pink: #ffbbbb;
+$light_blue: #dae6f1;
+$light_blue_2: #eff4f9;
+$blue_2: #9acff0;
+$blue: #68b5e2;
+$light_yellow: #f1e6da;
+$yellow: #f4cd48;
+$dark_yellow: #d9bc22;
+$light_green: #a5ddb8;
+$green: #17a468;
+$light_violet: #c9c7ef;
+$violet: #837fd1;
+
+@mixin displayTitle() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  color: $dark_blue;
+}
+
+@mixin titleH1() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.24px;
+  color: $dark_blue;
+}
+
+@mixin titleH2() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+  color: $dark_blue;
+}
+
+@mixin titleH3() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: $dark_blue;
+}
+
+@mixin titleH4() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $dark_blue;
+}
+
+@mixin headline() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: $dark_blue;
+}
+
+@mixin subhead() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: $dark_blue;
+}
+
+@mixin paragraph($weight: 400) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: $weight;
+  font-size: 15px;
+  line-height: 24px;
+  color: $dark_blue;
+}
+
+@mixin caption($weight: 400) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $dark_blue;
+}
+
+@mixin solidButton() {
+  padding: 8px 16px;
+  background: $dark_blue;
+  border-radius: 8px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $white;
+
+  &:hover {
+    background: $black-2;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &:active {
+    background: $black;
+  }
+}
+
+@mixin nakedButton() {
+  padding: 8px 16px;
+  background: none;
+  border-radius: 8px;
+
+  &:hover {
+    background: $white-2;
+  }
+
+  &:disabled {
+    background: $dark_blue;
+    opacity: 0.4;
+  }
+
+  &:active {
+    border: 1px solid $dark_blue;
+    background: none;
+  }
+}
+
+@mixin input() {
+  max-width: 600px;
+  padding: 10px 25px;
+  background: $white;
+  border: 2px solid $gray_2;
+  border-radius: 12px;
+  color: $dark;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  outline: none;
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: $light_dark_2;
+  }
+}
