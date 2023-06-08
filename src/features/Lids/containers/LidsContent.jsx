@@ -16,7 +16,7 @@ const LidsContent = () => {
       phone: "+998-93-189-73-18",
     },
   ]);
-  const [listEnable, setListEnable] = useState(false);
+  const [listEnable, setListEnable] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
