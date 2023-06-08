@@ -13,29 +13,6 @@
       width: 100%;
       height: 100%;
       background: $dark_blue-2;
-
-      ul {
-        li {
-          padding: 10px 5px;
-          margin-bottom: 10px;
-
-          .logo {
-            color: $white;
-            font-size: 28px;
-          }
-
-          a {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 24px;
-            display: flex;
-            align-items: center;
-            color: $gray;
-            text-decoration: none;
-          }
-        }
-      }
     }
 
     .layout_content {
@@ -51,6 +28,16 @@
         box-shadow: 0px 24px 38px rgba(47, 53, 57, 0.03),
           0px 9px 46px rgba(71, 116, 138, 0.02),
           0px 11px 15px rgba(95, 137, 158, 0.04);
+
+        .sidebar_icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 28px;
+          padding: 5px 10px;
+          cursor: pointer;
+          display: none;
+        }
 
         .search input {
           @include input();
@@ -80,6 +67,82 @@
       main {
         padding: 32px;
       }
+    }
+  }
+
+  .sidebar,
+  .mobile_sidebar {
+    ul {
+      li {
+        padding: 10px 5px;
+        margin-bottom: 10px;
+
+        .logo {
+          color: $white;
+          font-size: 28px;
+        }
+
+        a {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: $gray;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .mobile_sidebar {
+    display: none;
+    position: fixed;
+    width: 276px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s all;
+    background: $dark_blue-2;
+    padding: 15px;
+    z-index: 50;
+
+    .close_icon {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+
+      button {
+        background: none;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        cursor: pointer;
+
+        * {
+          stroke: $white;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .layout_container {
+      grid-template-columns: 0px 1fr;
+    }
+
+    .mobile_sidebar {
+      display: block;
+      left: -300px;
+
+      &.open {
+        left: 0;
+      }
+    }
+
+    .layout_container .layout_content nav .sidebar_icon {
+      display: flex;
     }
   }
 }

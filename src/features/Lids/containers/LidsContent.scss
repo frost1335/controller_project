@@ -1,0 +1,11 @@
+@import "../../../assets/styles/_global";
+
+.clients_list {
+  .list_head {
+    h1.list_title {
+      margin-bottom: 32px;
+
+      @include titleH1();
+    }
+  }
+}

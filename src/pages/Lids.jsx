@@ -1,10 +1,10 @@
 import React from "react";
-import { ClientsList } from "../features/Lids";
+import { LidsContent } from "../features/Lids";
 
 const Lids = () => {
   return (
     <>
-      <ClientsList />
+      <LidsContent />
     </>
   );
 };
