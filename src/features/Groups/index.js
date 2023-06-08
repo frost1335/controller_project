@@ -1,0 +1,1 @@
+export {default as GroupsList} from './components/GroupsList/GroupsList'

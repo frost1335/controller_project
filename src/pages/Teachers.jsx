@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { TeachersList } from "../features/Teachers";
 
 const Teachers = () => {
   return (
-    <div>
-      Teachers
-    </div>
-  )
-}
+    <>
+      <TeachersList />
+    </>
+  );
+};
 
-export default Teachers
+export default Teachers;

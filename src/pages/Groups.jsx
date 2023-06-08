@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { GroupsList } from "../features/Groups";
 
 const Groups = () => {
   return (
-    <div>
-      Groups
-    </div>
-  )
-}
+    <>
+      <GroupsList />
+    </>
+  );
+};
 
-export default Groups
+export default Groups;
