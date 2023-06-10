@@ -1,5 +1,4 @@
 import React from "react";
-import "./ClientsList.scss";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ClientsList = ({ clients }) => {

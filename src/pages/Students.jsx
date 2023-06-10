@@ -1,10 +1,10 @@
 import React from "react";
-import { StudentsList } from "../features/Students";
+import { StudentsContent } from "../features/Students";
 
 const Students = () => {
   return (
     <>
-      <StudentsList />
+      <StudentsContent />
     </>
   );
 };

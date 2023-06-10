@@ -5,21 +5,24 @@ import {
   AiOutlineDelete,
   AiOutlineUserAdd,
 } from "react-icons/ai";
+import { formatter } from "../../../../assets/scripts";
 
-const ClientsCards = ({ clients }) => {
+const ClientsCards = ({ students }) => {
   return (
     <div className="list_cards">
-      {clients.map((client, index) => (
+      {students.map((student, index) => (
         <div className="card" key={index + "-client"}>
           <div className="card_head">
             <div className="card_icon">
               <BiUser />
             </div>
-            <h3>{client.name}</h3>
+            <h3>{student.name}</h3>
           </div>
           <div className="card_body">
-            <p>{client.info}</p>
-            <span>{client.phone}</span>
+            <p>{student.group}</p>
+            <p>{student.teacher}</p>
+            <span>{student.phone}</span>
+            <h4>{formatter.format(student.balance)}</h4>
           </div>
           <div className="card_footer">
             <button>

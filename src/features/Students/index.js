@@ -1,1 +1,1 @@
-export { default as StudentsList } from "./components/StudentsList/StudentsList";
+export { default as StudentsContent } from "./containers/StudentsContent";
