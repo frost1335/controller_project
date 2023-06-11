@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { StudentDetailContent } from "../../features/StudentDetail";
 
 const StudentDetail = () => {
   return (
     <>
-      StudentDetail
+      <StudentDetailContent />
     </>
-  )
-}
+  );
+};
 
-export default StudentDetail
+export default StudentDetail;

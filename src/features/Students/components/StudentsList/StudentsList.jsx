@@ -1,6 +1,7 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { formatter } from "../../../../assets/scripts";
 
 const StudentsList = ({ students }) => {
   return (
@@ -26,7 +27,7 @@ const StudentsList = ({ students }) => {
             <td>{student.phone}</td>
             <td>{student.group}</td>
             <td>{student.teacher}</td>
-            <td>{student.balance}</td>
+            <td>{formatter.format(student.balance)}</td>
             <td className="button_item">
               <button className="settings_btn">
                 <BsThreeDotsVertical />
