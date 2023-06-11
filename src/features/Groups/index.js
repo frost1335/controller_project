@@ -1,1 +1,1 @@
-export {default as GroupsList} from './components/GroupsList/GroupsList'
+export { default as GroupsContent } from "./containers/GroupsContent";

@@ -331,6 +331,16 @@ $violet: #837fd1;
 
       h3 {
         @include titleH3();
+
+        a {
+          text-decoration: none;
+          color: $dark_blue;
+          transition: 0.08s;
+
+          &:hover {
+            color: $light_dark_2;
+          }
+        }
       }
     }
 
@@ -353,7 +363,13 @@ $violet: #837fd1;
       }
 
       h4 {
+        display: flex;
         @include paragraph(600);
+
+        h5 {
+          font-size: 14px;
+          font-weight: 400;
+        }
       }
     }
 
@@ -399,7 +415,6 @@ $violet: #837fd1;
   }
 
   .list_body {
-
     // list styles for cards
     .list_cards {
       @include listCards();
@@ -410,6 +425,4 @@ $violet: #837fd1;
       @include listTable();
     }
   }
-
-
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./LidsContent.scss";
 import ClientsList from "../components/ClientsList/ClientsList";
 import ClientsCards from "../components/ClientsCards/ClientsCards";
+import { MAX_WIDTH_TABLET } from "../../../constants";
 
 const LidsContent = () => {
   const [clients, setClients] = useState([
@@ -26,7 +27,7 @@ const LidsContent = () => {
 
     window.addEventListener("resize", handleResize);
 
-    if (windowWidth > 900) {
+    if (windowWidth > MAX_WIDTH_TABLET) {
       setListEnable(true);
     } else {
       setListEnable(false);

@@ -4,32 +4,77 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import { Students, Groups, Lids, Teachers } from "./pages";
+import {
+  Students,
+  Groups,
+  Lids,
+  Teachers,
+  StudentDetail,
+  GroupDetail,
+  TeacherDetail,
+} from "./pages";
 import Layout from "./layouts/Layout";
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
+      // lids router
       {
         path: "/lids",
-        element: <Lids />,
+        children: [
+          {
+            index: true,
+            element: <Lids />,
+          },
+        ],
       },
+      // students router
       {
         path: "/students",
-        element: <Students />,
+        children: [
+          {
+            index: true,
+            element: <Students />,
+          },
+          {
+            path: "detail/:studentId",
+            element: <StudentDetail />,
+          },
+        ],
       },
+      // groups router
       {
         path: "/groups",
-        element: <Groups />,
+        children: [
+          {
+            index: true,
+            element: <Groups />,
+          },
+          {
+            path: "detail/:groupId",
+            element: <GroupDetail />,
+          },
+        ],
       },
+      // teachers router
       {
         path: "/teachers",
-        element: <Teachers />,
+        children: [
+          {
+            index: true,
+            element: <Teachers />,
+          },
+          {
+            path: "detail/:teacherId",
+            element: <TeacherDetail />,
+          },
+        ],
       },
+      // lids redirect route
       {
         path: "/",
-        element: <Navigate to="/lids" />,
+        element: <Lids />,
       },
     ],
   },

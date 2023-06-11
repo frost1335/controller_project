@@ -1,5 +1,5 @@
 import React from "react";
-import { StudentsContent } from "../features/Students";
+import { StudentsContent } from "../../features/Students";
 
 const Students = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import { GroupsList } from "../features/Groups";
+import { GroupsContent } from "../../features/Groups";
 
 const Groups = () => {
   return (
     <>
-      <GroupsList />
+      <GroupsContent />
     </>
   );
 };

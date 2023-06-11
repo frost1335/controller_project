@@ -1,11 +1,9 @@
 import React from "react";
-import { BiUser } from "react-icons/bi";
-import {
-  AiOutlineEdit,
-  AiOutlineDelete,
-  AiOutlineUserAdd,
-} from "react-icons/ai";
+import { FaUserGraduate } from "react-icons/fa";
+import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import { TbReportMoney } from "react-icons/tb";
 import { formatter } from "../../../../assets/scripts";
+import { Link } from "react-router-dom";
 
 const ClientsCards = ({ students }) => {
   return (
@@ -14,9 +12,11 @@ const ClientsCards = ({ students }) => {
         <div className="card" key={index + "-client"}>
           <div className="card_head">
             <div className="card_icon">
-              <BiUser />
+              <FaUserGraduate />
             </div>
-            <h3>{student.name}</h3>
+            <h3>
+              <Link to="/students/detail/24126">{student.name}</Link>
+            </h3>
           </div>
           <div className="card_body">
             <p>{student.group}</p>
@@ -32,7 +32,7 @@ const ClientsCards = ({ students }) => {
               <AiOutlineDelete />
             </button>
             <button>
-              <AiOutlineUserAdd />
+              <TbReportMoney />
             </button>
           </div>
         </div>

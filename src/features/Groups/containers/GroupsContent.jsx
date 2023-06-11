@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import "./StudentsContent.scss";
-import StudentsList from "../components/StudentsList/StudentsList";
-import StudentsCards from "../components/StudentsCards/StudentsCards";
 import { MAX_WIDTH_TABLET } from "../../../constants";
+import GroupsCards from "../components/GroupsCards/GroupsCards";
+import GroupsList from "../components/GroupsList/GroupsList";
+import './GroupsContent.scss'
 
-const StudentsContent = () => {
-  const [students, setStudents] = useState([
+const GroupsContent = () => {
+  const [groups, setGroups] = useState([
     {
       name: "Alfreds Futterkiste",
-      phone: "+998-93-189-73-18",
-      group: "Web dasturlash",
+      course: "Web dasturlash",
       teacher: "Javlonbek Mirzaabdullayev",
-      balance: 800000,
+      day: "Sha-Yak",
+      time: "18:00-20:00",
     },
     {
-      name: "Alfreds Futterkiste 2",
-      phone: "+998-93-189-73-18",
-      group: "SMM",
+      name: "Guruh-6",
+      course: "SMM",
       teacher: "Raximov Dilrozbek",
-      balance: 600000,
+      day: "Du-Pay",
+      time: "14:00-16:00",
     },
   ]);
   const [listEnable, setListEnable] = useState(true);
@@ -43,19 +43,19 @@ const StudentsContent = () => {
   }, [windowWidth]);
 
   return (
-    <div className="students_list">
+    <div className="groups_list">
       <div className="list_head">
-        <h1 className="list_title">Studentlar</h1>
+        <h1 className="list_title">Guruhlar</h1>
       </div>
       <div className="list_body">
         {listEnable ? (
-          <StudentsList students={students} />
+          <GroupsList groups={groups} />
         ) : (
-          <StudentsCards students={students} />
+          <GroupsCards groups={groups} />
         )}
       </div>
     </div>
   );
 };
 
-export default StudentsContent;
+export default GroupsContent;
