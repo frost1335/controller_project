@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import TeacherDetailContent from "../../features/TeacherDetail/containers/TeacherDetailContent";
 
 const TeacherDetail = () => {
   return (
-    <div>
-      TeacherDetail
-    </div>
-  )
-}
+    <>
+      <TeacherDetailContent />
+    </>
+  );
+};
 
-export default TeacherDetail
+export default TeacherDetail;
