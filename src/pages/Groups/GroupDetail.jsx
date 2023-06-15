@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { GroupDetailContent } from "../../features/GroupDetail";
 
 const GroupDetail = () => {
   return (
-    <div>
-      GroupDetail
-    </div>
-  )
-}
+    <>
+      <GroupDetailContent />
+    </>
+  );
+};
 
-export default GroupDetail
+export default GroupDetail;

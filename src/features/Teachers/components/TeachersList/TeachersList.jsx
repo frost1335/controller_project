@@ -8,7 +8,7 @@ const TeachersList = ({ teachers }) => {
       <thead>
         <tr>
           <th>Ism</th>
-          <th>Guruh</th>
+          <th>Kurs</th>
           <th>Tel. raqam</th>
           <th>&nbsp;</th>
         </tr>
