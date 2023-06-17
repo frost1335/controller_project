@@ -15,6 +15,12 @@ const GroupInfo = () => {
       <p className="student_teacher">
         Studentlar soni: &nbsp; <span>34</span>
       </p>
+      <p className="student_teacher">
+        Dars kunlari: &nbsp; <span> Sha-Yak</span>
+      </p>
+      <p className="student_teacher">
+        Dars vaqti: &nbsp; <span> 18:00-20:00</span>
+      </p>
       <div className="info_buttons">
         <button>
           <AiOutlineEdit />

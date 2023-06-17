@@ -2,7 +2,6 @@ import React from "react";
 
 import "./TeacherInfo.scss";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
-import { TbReportMoney } from "react-icons/tb";
 
 const TeacherInfo = () => {
   return (
