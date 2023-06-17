@@ -6,7 +6,7 @@ const StudentsList = () => {
   const arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   return (
-    <div className="students_list">
+    <div className="students_detail_list">
       <h2>Studentlar ro'yhati</h2>
       <GroupAttendance studentsArr={arr} lessonDays={13} />
     </div>
